@@ -60,7 +60,7 @@ var config = {
         ]
     },
     resolve: {
-        extensions: ['.ts', '.js', '.vue', '.json'],
+        extensions: ['.ts', '.tsx', '.js', '.vue', '.json'],
         alias: {
             'src': path.join(__dirname, './src'),
             'css': path.join(__dirname, './src/css'),
@@ -114,10 +114,10 @@ var config = {
         historyApiFallback: true, //不跳转
         noInfo: true,
         host: ip.address(),
-        port: 8000,
+        port: 8001,
         proxy: {
             '/mock': {
-                target: 'http://localhost:9000'
+                target: 'http://localhost:9001'
             },
             changeOrigin: true
         },
@@ -166,6 +166,21 @@ if (isProd) {
         // optimize module ids by occurrence count
         new webpack.optimize.OccurrenceOrderPlugin()
     ])
+}
+
+if (!isProd) {
+    // mock server startup
+    var db = require('./mock/db.js');
+    var jsonServer = require('json-server');
+    var server = jsonServer.create();
+    var router = jsonServer.router(db);
+    var middlewares = jsonServer.defaults();
+
+    server.use(middlewares);
+    server.use('/mock', router);
+    server.listen(9000, function() {
+        console.log('Mock API Server is running!')
+    });
 }
 
 module.exports = config;
