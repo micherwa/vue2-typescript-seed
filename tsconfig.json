@@ -39,14 +39,15 @@
           // "jquery": [
           //   "node_modules/jquery/dist/jquery"
           // ]
-        }
+          "services": ["./src/services"]
+        },
+        // 编译过程中需要引入的库文件的列表
+        "lib": [
+          "es5",
+          "dom",
+          "es2015.promise"
+        ]
     },
-    // 编译过程中需要引入的库文件的列表
-    "lib": [
-      "es5",
-      "dom",
-      "es2015.promise"
-    ],
     "include": [
         "./src/**/*"
     ]

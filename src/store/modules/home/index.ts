@@ -2,14 +2,16 @@ import * as types from './types';
 import * as getters from './getters';
 import * as actions from './actions';
 
-const state = {
-    users: []
+export interface State {
+    users: any[]
 };
-/**
-* mutations
-*/
+
+const state: State = {
+  users: []
+};
+
 const mutations = {
-    [types.GET_USERS] (state, resp) {
+    [types.GET_USERS] (state: State, resp: any) {
         state.users = resp.result ? resp.result : [];
     }
 };
