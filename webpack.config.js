@@ -24,6 +24,20 @@ var config = {
                 loader: 'vue-loader'
             },
             {
+                test: /\.ts$/,
+                exclude: /node_modules/,
+                enforce: 'pre',
+                loader: 'tslint-loader'
+            },
+            {
+                test: /\.tsx?$/,
+                loader: 'ts-loader',
+                exclude: /node_modules/,
+                options: {
+                    appendTsSuffixTo: [/\.vue$/],
+                }
+            },
+            {
                 test: /\.(css)$/,
                 loader: ExtractTextPlugin.extract({
                     fallback: "style-loader",
@@ -36,14 +50,6 @@ var config = {
                     fallback: "style-loader",
                     use: ["css-loader", "postcss-loader", "sass-loader"]
                 })
-            },
-            {
-                test: /\.tsx?$/,
-                loader: 'ts-loader',
-                exclude: /node_modules/,
-                options: {
-                    appendTsSuffixTo: [/\.vue$/],
-                }
             },
             {
                 test: /\.html$/,

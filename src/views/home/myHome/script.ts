@@ -1,31 +1,21 @@
-// import { mapGetters } from 'vuex';
+import Vue from 'vue';
+import Component from 'vue-class-component';
 
-export default {
-    data () {
-        return {
-            showMyModal: false,
-            mobilePhone: null
-        };
-    },
-    computed: {
-        // ...mapGetters([
-        //     'users'
-        // ])
-    },
-    created () {
-        // this.load();
-    },
-    methods: {
-        // async load () {
-        //     const userList = await this.$store.dispatch('getUsers', [1, 10]);
-        //     console.log(userList);
-        // },
-        // handleConfirm () {
-        //     this.showMyModal = false;
-        //     console.log(`mobile:${this.mobilePhone}`);
-        // },
-        // handleChange (checked, value) {
-        //     console.log(`checked=${checked}`, `value=${value}`);
-        // }
+@Component
+export default class myHome extends Vue {
+    msg = 'world';
+
+    mounted () {
+
+    }
+
+    // 计算属性
+    get sayHello () {
+      return 'hello ' + this.msg
+    }
+
+    // 方法
+    sayHi () {
+      alert('hi: ' + this.msg)
     }
 };

@@ -2,9 +2,9 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import axios from 'axios';
 import VueAxios from 'vue-axios';
-import store from './store/index';
-import App from './views/app.vue';
+// import store from './store/index';
 import routes from './views/routes';
+import App from './views/app.vue';
 
 Vue.use(VueRouter);
 Vue.use(VueAxios, axios);
@@ -16,6 +16,6 @@ const router = new VueRouter({
 
 new Vue({
     router,
-    store,
+    // store,
     render: h => h(App)
 }).$mount('#app');

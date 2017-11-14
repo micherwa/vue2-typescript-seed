@@ -16,19 +16,21 @@
   },
   "keywords": [
     "typescript",
-    "vue"
+    "vue",
+    "vuex"
   ],
   "author": "Jaked <530974640@qq.com>",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.17.0",
-    "typescript": "^2.5.3",
+    "typescript": "^2.6.1",
     "vue": "^2.5.3",
     "vue-axios": "^2.0.2",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1"
   },
   "devDependencies": {
+    "@types/axios": "^0.14.0",
     "ajv": "^5.3.0",
     "autoprefixer": "^7.1.6",
     "copy-webpack-plugin": "^4.2.0",
@@ -42,11 +44,16 @@
     "precss": "^2.0.0",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
-    "ts-loader": "^3.0.5",
+    "ts-loader": "^3.1.1",
     "tslib": "^1.8.0",
+    "tslint": "^5.8.0",
+    "tslint-config-standard": "^7.0.0",
+    "tslint-loader": "^3.5.3",
     "url-loader": "^0.6.2",
+    "vue-class-component": "^6.1.0",
     "vue-html-loader": "^1.2.4",
     "vue-loader": "^13.3.0",
+    "vue-property-decorator": "^6.0.0",
     "vue-template-compiler": "^2.5.3",
     "webpack": "^3.8.1",
     "webpack-dev-server": "^2.9.3"
