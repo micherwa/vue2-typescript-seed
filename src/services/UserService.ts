@@ -1,7 +1,7 @@
-import Vue from 'vue';
+import axios from 'axios';
 
 export default {
-    // userList (option = {}) {
-    //     return Vue.axios.get('/mock/userList', { params: option });
-    // }
+    userList (option = {}) {
+        return axios.get('/mock/userList', { params: option });
+    }
 };

@@ -5,7 +5,7 @@
     },
     "rules": {
         "no-consecutive-blank-lines": false,
-        "semicolon": ["always"],
-        "indent": [true, "spaces", 2]
+        "semicolon": [false],
+        "indent": [true, "spaces"]
     }
 }

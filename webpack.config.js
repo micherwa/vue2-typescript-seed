@@ -184,7 +184,7 @@ if (!isProd) {
 
     server.use(middlewares);
     server.use('/mock', router);
-    server.listen(9000, function() {
+    server.listen(9001, function() {
         console.log('Mock API Server is running!')
     });
 }
