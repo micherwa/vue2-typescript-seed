@@ -1,13 +1,13 @@
 {
-  "name": "vue-typescript-mobile-seed",
+  "name": "vue2-typescript-seed",
   "version": "1.0.0",
   "description": "vue+typescript的mobile种子工程",
   "main": "webpack.config.js",
-  "homepage": "https://code.houbank.net/liuchao02/vue-typescript-mobile-seed",
+  "homepage": "https://github.com/micherwa/vue2-typescript-seed",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git+https://code.houbank.net/liuchao02/vue-typescript-mobile-seed"
+    "url": "git+https://github.com/micherwa/vue2-typescript-seed"
   },
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server --inline",
@@ -20,7 +20,7 @@
     "vuex",
     "axios"
   ],
-  "author": "liuchao02<liuchao02@houbank.cn>",
+  "author": "Jaked <530974640@qq.com>",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.17.1",
