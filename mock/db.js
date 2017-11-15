@@ -1,6 +1,10 @@
-let user = require('./user');
-let userList = user.userList;
+const user = require('./user');
+const product = require('./product');
+
+const userList = user.list;
+const productList = product.list;
 
 module.exports = {
-    userList
+    userList,
+    productList
 };

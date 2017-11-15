@@ -3,7 +3,15 @@
         {{sayHello}}
         <button @click="sayHi">hi</button>
 
-        <div class="list m-t-30" v-for="item in userList">
+        <p class="m-t-30">直接从mock中取到的user数据：</p>
+        <div class="list" v-for="item in userList">
+            <div class="item">
+                <label class="item-label arrow" :id="'item-'+item.id">{{item.name}}</label>
+            </div>
+        </div>
+
+        <p class="m-t-30">间接从vuex中取到的product数据：</p>
+        <div class="list" v-for="item in productList">
             <div class="item">
                 <label class="item-label arrow" :id="'item-'+item.id">{{item.name}}</label>
             </div>

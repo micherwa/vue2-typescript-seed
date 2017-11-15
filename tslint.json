@@ -1,5 +1,4 @@
 {
-    // "extends": "tslint-config-standard",
     "extends": "tslint:recommended",
     "globals": {
         "require": true
@@ -17,6 +16,8 @@
         "space-before-function-paren": false,
         "object-literal-sort-keys": false,
         "ordered-imports": false,
-        "object-literal-shorthand": false
+        "object-literal-shorthand": false,
+        "interface-name": [true, "never-prefix"],
+        "no-shadowed-variable": false
     }
 }
