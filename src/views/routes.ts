@@ -1,6 +1,6 @@
 import HomeRoutes from './home';
 
-let routes = [
+const routes = [
     ...HomeRoutes
 ];
 

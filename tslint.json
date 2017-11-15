@@ -1,11 +1,22 @@
 {
-    "extends": "tslint-config-standard",
+    // "extends": "tslint-config-standard",
+    "extends": "tslint:recommended",
     "globals": {
         "require": true
     },
     "rules": {
+        "new-parens": true,
+        "no-arg": true,
+        "no-bitwise": true,
+        "no-conditional-assignment": true,
         "no-consecutive-blank-lines": false,
-        "semicolon": [false],
-        "indent": [true, "spaces"]
+        "trailing-comma": false,
+        "semicolon": false,
+        "quotemark": false,
+        "indent": [true, "spaces", 4],
+        "space-before-function-paren": false,
+        "object-literal-sort-keys": false,
+        "ordered-imports": false,
+        "object-literal-shorthand": false
     }
 }
