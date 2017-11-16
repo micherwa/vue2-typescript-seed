@@ -41,6 +41,6 @@ export default class myHome extends Vue {
         this.userList = res.data.result;
 
         const name1 = _.result(_.find(this.userList, {id: 1}), 'name');
-        console.log(name1);
+        console.log(`name: ${name1}`);
     }
 };

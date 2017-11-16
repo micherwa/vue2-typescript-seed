@@ -1,5 +1,6 @@
 <template>
     <div class="home">
+        <Title name="vue-ts-demo"></Title>
         {{sayHello}}
         <!-- <button @click="sayHi">hi</button> -->
         <mt-button @click.native="sayHi">say hi</mt-button>

@@ -6,6 +6,7 @@ import store from './store/index';
 import App from './views/app.vue';
 import routes from './views/routes';
 import 'css/app.scss';
+import 'components';
 
 Vue.use(Mint);
 Vue.use(VueRouter);
