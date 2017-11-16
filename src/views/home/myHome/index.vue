@@ -1,7 +1,8 @@
 <template>
     <div class="home">
         {{sayHello}}
-        <button @click="sayHi">hi</button>
+        <!-- <button @click="sayHi">hi</button> -->
+        <mt-button @click.native="sayHi">say hi</mt-button>
 
         <p class="m-t-30">直接从mock中取到的user数据：</p>
         <div class="list" v-for="item in userList">

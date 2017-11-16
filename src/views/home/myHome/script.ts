@@ -4,6 +4,8 @@ import { Getter } from 'vuex-class';
 import { Product } from '../../../store/modules/home';
 import UserService from '../../../services/UserService';
 import ProductService from '../../../services/ProductService';
+import _ from 'lodash';
+import { Toast } from 'mint-ui';
 
 @Component({
     // here can define template
@@ -31,11 +33,14 @@ export default class myHome extends Vue {
 
     // 方法
     sayHi () : void {
-        alert('hi: ' + this.msg);
+       Toast(`hi ${this.msg}`);
     }
 
     async getUserList () : Promise<void> {
         const res = await UserService.userList();
         this.userList = res.data.result;
+
+        const name1 = _.result(_.find(this.userList, {id: 1}), 'name');
+        console.log(name1);
     }
 };
