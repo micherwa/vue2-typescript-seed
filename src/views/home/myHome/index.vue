@@ -2,8 +2,13 @@
     <div class="home">
         <Title name="vue-ts-demo"></Title>
         {{sayHello}}
-        <!-- <button @click="sayHi">hi</button> -->
-        <mt-button @click.native="sayHi">say hi</mt-button>
+        <mt-button @click="sayHi">say hi</mt-button>
+
+        <button class="btn btn-default" @click="startCountDown" :disabled="countDown.isStart">
+            <CountDown :is-start="countDown.isStart" :seconds="5"
+             :on-count-end="handleCountEnd" initContent="免费获取" afterContent="再次获取">
+            </CountDown>
+        </button>
 
         <p class="m-t-30">直接从mock中取到的user数据：</p>
         <div class="list" v-for="item in userList">

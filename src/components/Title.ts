@@ -8,7 +8,7 @@ export default {
     },
     created () {
         // 设置title
-        document.title = this.name || '厚本金融';
+        document.title = this.name || 'vue2-typescript';
     },
     watch: {
         // 处理异步返回的title数据

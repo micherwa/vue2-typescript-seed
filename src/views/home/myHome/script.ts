@@ -7,6 +7,10 @@ import ProductService from '../../../services/ProductService';
 import _ from 'lodash';
 import { Toast } from 'mint-ui';
 
+interface CountDown {
+    isStart: boolean
+}
+
 @Component({
     // here can define template
 })
@@ -16,6 +20,7 @@ export default class myHome extends Vue {
 
     msg: string = 'world';
     userList: any = [];
+    countDown: CountDown = { isStart: false };
 
     // 生命周期钩子
     created () {
@@ -42,5 +47,15 @@ export default class myHome extends Vue {
 
         const name1 = _.result(_.find(this.userList, {id: 1}), 'name');
         console.log(`name: ${name1}`);
+    }
+
+    startCountDown () {
+        this.countDown.isStart = true;
+    }
+
+    handleCountEnd (isEnd, msg) {
+        if (isEnd) {
+            this.countDown.isStart = false;
+        }
     }
 };
