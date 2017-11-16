@@ -9,6 +9,6 @@ export default new Vuex.Store({
     modules: {
         home
     }
-    // strict: __DEV__,
+    // strict: __DEV__
     // plugins: __DEV__ ? [createLogger()] : []
 });

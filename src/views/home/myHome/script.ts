@@ -5,12 +5,15 @@ import { Product } from '../../../store/modules/home';
 import UserService from '../../../services/UserService';
 import ProductService from '../../../services/ProductService';
 
-@Component
+@Component({
+    // here can define template
+})
+
 export default class myHome extends Vue {
     @Getter('products') productList: Product [];
 
-    msg = 'world';
-    userList = [];
+    msg: string = 'world';
+    userList: any = [];
 
     // 生命周期钩子
     created () {
@@ -22,16 +25,16 @@ export default class myHome extends Vue {
     }
 
     // 计算属性
-    get sayHello () {
+    get sayHello () : string {
         return 'hello ' + this.msg;
     }
 
     // 方法
-    sayHi () {
+    sayHi () : void {
         alert('hi: ' + this.msg);
     }
 
-    async getUserList () {
+    async getUserList () : Promise<void> {
         const res = await UserService.userList();
         this.userList = res.data.result;
     }
