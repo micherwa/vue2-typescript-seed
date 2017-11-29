@@ -4,7 +4,7 @@
         {{sayHello}}
         <mt-button @click="sayHi">say hi</mt-button>
 
-        <button class="btn btn-default" @click="startCountDown" :disabled="countDown.isStart">
+        <button class="btn btn-default m-t-15" @click="startCountDown" :disabled="countDown.isStart">
             <CountDown :is-start="countDown.isStart" :seconds="5"
              :on-count-end="handleCountEnd" initContent="免费获取" afterContent="再次获取">
             </CountDown>

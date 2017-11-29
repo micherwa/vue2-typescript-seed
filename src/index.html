@@ -7,9 +7,27 @@
     <base href="/">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1">
     <meta name="renderer" content="webkit">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
     <meta name="format-detection" content="telphone=no, email=no">
     <meta http-equiv="pragma" content="no-cache">
     <meta http-equiv="Cache-Control" content="no-cache">
+    <script type="text/javascript">
+        (function (win){
+            var doc = win.document,
+                html = doc.documentElement;
+            var baseWidth = 750,
+                grids = baseWidth / 100,
+            resizeEvt = 'orientationchange' in win ? 'orientationchange' : 'resize',
+            recalc = function(){
+                var clientWidth = html.clientWidth || 320;
+                if( clientWidth > 750 ){ clientWidth = 750 };
+                html.style.fontSize = clientWidth / grids + 'px';
+            };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(window);
+    </script>
 </head>
 
 <body>
